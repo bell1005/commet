@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Comment Sender</title>
+</head>
+<body>
+  <input id="comment" placeholder="コメントを入力">
+  <button onclick="send()">送信</button>
+
+  <script>
+    let username = localStorage.getItem("username");
+    if (!username) {
+      username = prompt("ユーザーネームを入力してください");
+      localStorage.setItem("username", username);
+    }
+
+    function send() {
+      alert(username + "：送信（※今はまだ仮）");
+    }
+  </script>
+</body>
+</html>
